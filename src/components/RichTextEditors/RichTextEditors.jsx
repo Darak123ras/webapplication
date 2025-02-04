@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import "react-quill/dist/quill.snow.css"; 
 import './RichTextEditors.css'
 import ReactQuill from "react-quill";
@@ -13,10 +12,6 @@ const RichTextEditors = () => {
       setContent(savedContent);
     }
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("richTextContent", content);
-  }, [content]);
 
   const formats = [
     "header",
@@ -35,13 +30,19 @@ const RichTextEditors = () => {
     ],
   };
 
+  useEffect(() => {
+    localStorage.setItem("richTextContent", content);
+  }, [content]);
+
+  
+
   
 
   return (
     <div className="container-rich">
       <h2>Rich Text Editor</h2>
       <ReactQuill
-      className="txt"
+        className="txt"
         theme="snow" 
         value={content}
         onChange={setContent}

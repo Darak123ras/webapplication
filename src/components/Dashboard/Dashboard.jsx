@@ -1,8 +1,12 @@
+
 import React from 'react';
 import { Chart, registerables } from 'chart.js';
 import Counter from '../Counter/Counter';
 import { Grid, Container } from '@mui/material';
 import RichTextEditors from '../RichTextEditors/RichTextEditors';
+import UserData from '../UserData/UserData'
+import UserDataForm from '../UserDataForm/UserDataForm';
+
 
 Chart.register(...registerables);
 
@@ -23,7 +27,7 @@ const Dashboard = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Container className='cont' maxWidth="lg">
       <Grid container spacing={4} >
         <Grid item xs={12} md={6}>
           <Counter />
@@ -31,6 +35,20 @@ const Dashboard = () => {
         <Grid item xs={12} md={6}>
           <RichTextEditors />
         </Grid>
+        <Grid item xs={12} md={6}>
+          <UserData />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <UserDataForm />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          {/* <div style={{ height: '400px' }}>
+            <Bar
+              data={data}
+              options={{ responsive: true, maintainAspectRatio: false }}
+            />
+          </div> */}
+          </Grid>
       </Grid>
     </Container>
   );
