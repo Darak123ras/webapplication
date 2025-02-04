@@ -1,0 +1,17 @@
+.container-rich{
+    max-width: 800px;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.container-rich h2{
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.container-rich .prev{
+    margin-top: 20px;
+    display:block;
+}

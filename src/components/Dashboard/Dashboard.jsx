@@ -2,6 +2,7 @@ import React from 'react';
 import { Chart, registerables } from 'chart.js';
 import Counter from '../Counter/Counter';
 import { Grid, Container } from '@mui/material';
+import RichTextEditors from '../RichTextEditors/RichTextEditors';
 
 Chart.register(...registerables);
 
@@ -23,9 +24,12 @@ const Dashboard = () => {
 
   return (
     <Container maxWidth="lg">
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         <Grid item xs={12} md={6}>
           <Counter />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <RichTextEditors />
         </Grid>
       </Grid>
     </Container>
